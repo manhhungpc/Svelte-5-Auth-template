@@ -40,12 +40,52 @@ At its core, SvelteKit’s job boils down to three things:
 
 For more information, checkout tutorial: https://svelte.dev/tutorial/kit/page-data
 
+**Data flow:**
+
+- For loading layout data (navbar, header, ...): `+layout.server.ts`, `+layout.ts`
+- For loading data of a specific page: `+page.server.ts`, `+page.ts`
+
+**Reference:**
+
+https://svelte.dev/docs/kit/load
+
+https://svelte.dev/docs/kit/load#Universal-vs-server
+
 ## Directory
 
 https://svelte.dev/docs/kit/routing
 
+For this project:
+
+Genenral:
+
 - `src/hooks.server.ts`: Hooks running for every request
+
+Library/utility:
+
 - `lib/server`: Code for authentication, server-side action
+- `lib/component`: Reusable component
+
+Routing:
+
 - `routes/(auth)/*`: Protected route here, need logged in
+- `routes/login/*`: Login page
+
+Global state management:
+
 - `store/writable.ts`: For traditional stores, using **writable()**
 - `store/runes/*.svelte.ts`: For global state reactivity with **$state()** of Svelte5
+
+## Tools and config with Svelte
+
+**Extension**: [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+
+Recommend config for VS Code:
+
+```json
+{
+	"explorer.sortOrder": "filesFirst",
+	"workbench.tree.indent": 12,
+	"workbench.tree.renderIndentGuides": "always"
+}
+```

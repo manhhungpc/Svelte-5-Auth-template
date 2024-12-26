@@ -1,0 +1,6 @@
+{
+	"explorer.sortOrder": "filesFirst",
+	"svelte.plugin.svelte.format.config.svelteStrictMode": true,
+	"workbench.tree.indent": 12,
+	"workbench.tree.renderIndentGuides": "always"
+}

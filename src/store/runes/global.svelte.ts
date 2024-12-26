@@ -1,3 +1,3 @@
-export const counter = $state({
-	count: 0
+export const globalState = $state({
+	isLoadingApi: false
 });

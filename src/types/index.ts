@@ -1,5 +1,1 @@
-interface UserInfo {
-	id: number;
-	email: string;
-	role: string;
-}
+export type Method = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'OPTIONS';

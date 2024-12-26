@@ -1,4 +1,7 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
+
+import type { UserInfo } from './interfaces';
+
 // for information about these interfaces
 declare global {
 	namespace App {

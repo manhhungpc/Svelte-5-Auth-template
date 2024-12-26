@@ -1,17 +1,14 @@
-import type { PageServerLoad } from "./$types"
+import { fetchData } from '@services/api';
+import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ parent }) => {
-	await parent()
+	await parent();
 	const getCustomers = async () => {
-		console.log("Fetched customers from database")
-		const res = await fetch(
-			"https://dummyjson.com/users?limit=10&skip=10&select=firstName,lastName,id,email",
-		)
-		const customers = await res.json()
-		return customers.users
-	}
+		const customers = await fetchData('/users?limit=10', 'GET');
+		return customers.data.users;
+	};
 
 	return {
-		customers: await getCustomers(),
-	}
-}
+		customers: await getCustomers()
+	};
+};

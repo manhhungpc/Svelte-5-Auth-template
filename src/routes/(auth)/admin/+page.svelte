@@ -1,4 +1,5 @@
 <script lang="ts">
+	import TableData from '@components/TableData.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -12,25 +13,11 @@
 		{/if}
 	</div>
 	<h4>Customers:</h4>
-	<div class="user-list">
-		{#each data.customers as customer}
-			<a href="/admin/{customer.id}">{customer.firstName} {customer.lastName}</a>
-		{/each}
-	</div>
+	<TableData userData={data.customers} />
 </main>
 
 <style lang="postcss">
 	h4 {
 		padding-top: 1rem;
-	}
-	.user-list {
-		display: flex;
-		flex-direction: column;
-
-		& a {
-			padding: 4px;
-			border: 1px solid green;
-			margin: 5px 0;
-		}
 	}
 </style>

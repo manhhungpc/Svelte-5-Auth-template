@@ -1,4 +1,7 @@
 @import 'global.pcss';
+@tailwind base;
+@tailwind utilities;
+/* @tailwind components; */
 
 $dark-300: hsl(213, 24%, 7%);
 $dark-200: hsl(222, 15%, 13%);
@@ -28,56 +31,6 @@ main {
 	align-items: center;
 	height: 100vh;
 	padding: 0 20px;
-}
-
-.button-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 1rem;
-	gap: 1rem;
-}
-
-.card {
-	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	background-color: $dark-200;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	padding: 32px;
-}
-
-.btn {
-	color: $dark-300;
-	border: none;
-	border-radius: 5px;
-	padding: 8px 16px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: all 0.2s ease-in-out;
-
-	&:hover {
-		text-decoration: none;
-	}
-}
-
-.btn-primary {
-	background-color: $primary-200;
-	color: $dark-300;
-
-	&:hover {
-		background-color: $primary-300;
-	}
-}
-
-.btn-secondary {
-	background-color: $secondary-200;
-	color: $dark-300;
-
-	&:hover {
-		background-color: $secondary-300;
-	}
 }
 
 input {
