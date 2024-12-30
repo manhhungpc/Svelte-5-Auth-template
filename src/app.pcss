@@ -1,6 +1,7 @@
 @import 'global.pcss';
 @tailwind base;
 @tailwind utilities;
+@tailwind components;
 /* @tailwind components; */
 
 $dark-300: hsl(213, 24%, 7%);
@@ -20,19 +21,6 @@ body {
 	font-size: 18px;
 }
 
-main {
-	padding: 2rem;
-	text-align: center;
-}
-
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-	padding: 0 20px;
-}
-
 input {
 	background-color: $dark-100;
 	border: $gray 2px solid;
@@ -44,41 +32,5 @@ input {
 
 	&:focus {
 		outline: $primary-300 2px solid;
-	}
-}
-
-.auth-form {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	max-width: 400px;
-	min-width: 400px;
-	margin: 0 auto;
-
-	& label {
-		text-align: left;
-		padding-bottom: 2px;
-		font-size: 16px;
-	}
-}
-
-.navbar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	gap: 1rem;
-	border-bottom: 1px solid $gray;
-
-	& .btn {
-		padding: 5px 10px;
-		font-size: 12px;
-		background-color: inherit;
-		border: 2px solid white;
-		color: white;
-
-		&:hover {
-			background-color: $dark-100;
-		}
 	}
 }

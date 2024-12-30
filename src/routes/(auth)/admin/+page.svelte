@@ -6,13 +6,13 @@
 </script>
 
 <main>
-	<div>
+	<div class="text-center">
 		<h3>Admin Home</h3>
 		{#if data.user}
 			<p>You are currently logged in as: {data.user.email}</p>
 		{/if}
 	</div>
-	<h4>Customers:</h4>
+	<h4 class="text-center">Customers:</h4>
 	<TableData userData={data.customers} />
 </main>
 

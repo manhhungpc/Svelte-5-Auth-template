@@ -89,3 +89,10 @@ Recommend config for VS Code:
 	"workbench.tree.renderIndentGuides": "always"
 }
 ```
+
+## Library
+
+- [Bits UI](https://next.bits-ui.com/docs/introduction) - Collection of headless component primitives for Svelte
+- [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework packed with classes
+- [Zod](https://zod.dev/) - TypeScript-first schema validation with static type inference
+- [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript
